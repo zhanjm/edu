@@ -1,3 +1,36 @@
+.bg-black{
+	background: #000;
+	
+}
+.bg-black-padding-13{
+	padding: 13px 0px;
+	margin: 0px;
+}
+.text-color-white{
+	color:#FFF;
+}
+
+.text-color-yellow{
+	color:yellow;
+}
+.header-title{
+	padding: 40px 0px;
+	background:#28A4C9 url(bg.jpg) no-repeat fixed right  top ;
+	font-size: 35px;
+	color: #FFF;
+	
+	
+}
+
+.table-title{
+	font-size: 25px;
+}
+
+
  table{
 	table-layout: fixed !important;
 }
+ #date{
+	 font-size: 18px;
+ }
+

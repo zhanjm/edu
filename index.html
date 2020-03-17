@@ -2,69 +2,106 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>test</title>
-		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<title>测试</title>
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap-datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap-datetimepicker.zh-CN.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap-select.min.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css"/>
+		<link rel="stylesheet" type="text/css" href="index.css"/>		
 	</head>
-	<body>
-		<div id="Date" ></div>
-		    <script type="text/javascript"> 
-		        setInterval(function(){   
-		        var date = new Date();   
-		        var year = date.getFullYear();    //获取当前年份   
-		        var mon = date.getMonth()+1;      //获取当前月份   
-		        var da = date.getDate();          //获取当前日   
-		        var day = date.getDay();          //获取当前星期几  
-				var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
-		        var h = date.getHours();          //获取小时   
-		        var m = date.getMinutes();        //获取分钟   
-		        var s = date.getSeconds();        //获取秒   
-		        var d = document.getElementById('Date');    
-		          d.innerHTML='当前时间:'+year+'年'+mon+'月'+da+'日'+weekday[day]+' '+h+':'+m+':'+s;  
-		        },1000)
-		    </script>
+	<body class="lead">
+
 		<div class="container">
+			<div class="row header-title">
+				<div class="col-lg-12">深尚教育江西省自学考试考生内部学籍注册系统</div>			
+			</div>
+		</div>	
+	
+		<div class="row bg-black text-color-white bg-black-padding-13 ">
+			<!-- <div class="col-lg-2"></div> -->
+			<div class="col-lg-2 col-lg-offset-2 text-center">考试形式总览</div>
+			<div class="col-lg-2 text-center">考试须知</div>
+			<div class="col-lg-2 text-center">档案注册系统</div>
+			<div class="col-lg-2 text-center">帮助中心</div>
+			
+		</div>
+		
+		
+		<div class="container">	
+			<div class="row">
+				
+				<div class="col-lg-12" id='date'></div>
+				
+				<div class="col-lg-10">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提醒：本批次报名即将截止，自考档案通道将于2020年3月13日23:59关闭！
+				</div>
+				
+				
+			</div>
+			<div class="row table-title bg-black">
+				
+				<div class="col-lg-12 text-center  text-color-white table-header">江西省2019年自学考试档案注册申请表</div>
+				<div class="col-lg-12 text-center  text-color-yellow" >填写报名信息</div>
+			</div>		
+			<div class="row">			
+			</div>
+
 			<div class="row">	
 				<div class="col-lg-12">
 					<table class="table table-bordered">
 						<tr>
 							<td align="center" colspan="1">姓名</td>
 							<td colspan="2">
-								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+
+								<input type="text" class="form-control" id="name" placeholder="姓名">
 							</td>
 							<td align="center" colspan="1">性别</td>
 							<td colspan="2">
-								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+								<select class="selectpicker">
+								  <option>男</option>
+								  <option>女</option>
+								</select>
+
 							</td>
 							<td rowspan="4" style="text-align:center;vertical-align:middle;">123</td>
 						</tr>
 						<tr>
 							<td align="center" colspan="1">民族</td>
 							<td colspan="2">
-								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+
+								<input type="text" class="form-control" id="mz" placeholder="民族">
 							</td>
 							<td align="center" colspan="1">出生年月</td>
 							<td colspan="2">
-								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+								<input type="text" class="form_date">
+								
+								<!-- <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email"> -->
+
 							</td>
 							
 						</tr>
 						<tr>
 							<td align="center" colspan="1">现阶段学历</td>
 							<td  colspan="2">
-								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+
+								<input type="text" class="form-control" id="学历" placeholder="现阶段学历">
 							</td>
 							<td align="center" colspan="1">手机号码</td>
 							<td colspan="2">
-								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+								<input type="text" class="form-control" id="phone" placeholder="手机号码">
+
 							</td>
 						</tr>
 						<tr>
 							<td align="center">身份证号</td>
 							<td colspan="5">
-								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+
+								<input type="text" class="form-control" id="idcard" placeholder="身份证号码">
+
 							</td>
 						</tr>
 						 <tr>
@@ -118,8 +155,50 @@
 				</div>
 				
 			</div>
-		</div>
+		</div>		
+		<script type="text/javascript">
+			$('.form_date').datetimepicker({
+			  format:'yyyy 年 mm 月',
+			  language : 'zh-CN',
+			  weekStart : 1,
+			  todayBtn : true,
+			  autoclose : 1,
+			  startView : 'year',
+			  maxView:'decade',
+			  minView :'year',
+			  forceParse : false,
+			  pickerPosition: "bottom-left"
+			 }); 
+			
+			setInterval(function(){
+			var date = new Date();   
+			var year = date.getFullYear();    //获取当前年份   
+			var mon = date.getMonth()+1;      //获取当前月份   
+			var da = date.getDate();          //获取当前日   
+			var day = date.getDay();          //获取当前星期几  
+			var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+			var h = date.getHours();          //获取小时   
+			var m = date.getMinutes();        //获取分钟   
+			var s = date.getSeconds();        //获取秒   
+			var d = document.getElementById('date');    
+			  d.innerHTML='填表时间'+year+'年'+mon+'月'+da+'日'+weekday[day]+' '+h+'时'+m+'分'+s+'秒';  
+			  
+			},1000)
+			
+			$(function(){
+				console.log($('.header-title').css("background"));
+				
+				var height = parseInt($('.header-title').css("height").toString().split("px")[0]);
+				var padding = parseInt($('.header-title').css("padding-top").toString().split("px")[0]);
+				$('.header-title').css("background-size",(height+padding*2)+"px auto");
+				console.log($('.header-title').css("background-size"));
+			})
+			
+		</script>
 		
 		
+		
+		
+
 	</body>
 </html>
