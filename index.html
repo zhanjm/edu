@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<div id="Date" ></div>
+		    <script type="text/javascript"> 
+		        setInterval(function(){   
+		        var date = new Date();   
+		        var year = date.getFullYear();    //获取当前年份   
+		        var mon = date.getMonth()+1;      //获取当前月份   
+		        var da = date.getDate();          //获取当前日   
+		        var day = date.getDay();          //获取当前星期几  
+				var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+		        var h = date.getHours();          //获取小时   
+		        var m = date.getMinutes();        //获取分钟   
+		        var s = date.getSeconds();        //获取秒   
+		        var d = document.getElementById('Date');    
+		          d.innerHTML='当前时间:'+year+'年'+mon+'月'+da+'日'+weekday[day]+' '+h+':'+m+':'+s;  
+		        },1000)
+		    </script>
+		<div class="container">
+			<div class="row">	
+				<div class="col-lg-12">
+					<table class="table table-bordered">
+						<tr>
+							<td align="center" colspan="1">姓名</td>
+							<td colspan="2">
+								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+							</td>
+							<td align="center" colspan="1">性别</td>
+							<td colspan="2">
+								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+							</td>
+							<td rowspan="4" style="text-align:center;vertical-align:middle;">123</td>
+						</tr>
+						<tr>
+							<td align="center" colspan="1">民族</td>
+							<td colspan="2">
+								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+							</td>
+							<td align="center" colspan="1">出生年月</td>
+							<td colspan="2">
+								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+							</td>
+							
+						</tr>
+						<tr>
+							<td align="center" colspan="1">现阶段学历</td>
+							<td  colspan="2">
+								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+							</td>
+							<td align="center" colspan="1">手机号码</td>
+							<td colspan="2">
+								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+							</td>
+						</tr>
+						<tr>
+							<td align="center">身份证号</td>
+							<td colspan="5">
+								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+							</td>
+						</tr>
+						 <tr>
+							<td rowspan="5" style="text-align:center;vertical-align:middle;">自学考试报名<br>月补贴申请</td>
+							<td colspan="6" align="center">高级人才补贴申请信息栏</td>
+							
+						</tr>
+						<tr>
+							<td align="center" colspan="2">
+								<label class="radio">
+									<input type="radio" name="hk" value="1" checked="checked" />江西省户口
+								</label>
+							</td>
+							<td colspan="4" align="center">本批次仅剩9个名额</td>
+						</tr>
+						<tr>
+							<td  align="center" colspan="2">
+								<label class="radio">
+									<input type="radio" name="hk" value="2" checked="checked" />非江西省户口
+								</label>
+							</td>
+							<td colspan="4" align="center">本批次仅剩8个名额</td>
+						</tr>
+						<tr>
+							<td align="center" colspan="2">
+								<label class="radio">
+									<input type="radio" name="hk" value="3" checked="checked" />军官、高级教师持有人
+								</label>
+							</td>
+							<td colspan="4" align="center">不限名额</td>
+						</tr>
+						<tr>
+							<td align="center" colspan="2">
+								<label class="radio">
+									<input type="radio" name="hk" value="4" checked="checked" />市级劳动模范获得者
+								</label>
+							</td>
+							<td colspan="4" align="center">不限名额</td>
+						</tr> 
+						<tr>
+							<td  align="center" colspan="1"></td>
+							<td class="btn-group-lg" colspan="6">
+								<button type="button" class="btn btn-danger"> 提 交 </button>
+							</td>
+						</tr>
+						<tr>
+							<td align="center" colspan="1"></td>
+							<td colspan="6">注：1.报考信息块一录入。。。。<br>2.高考学员需。。。</td>
+						</tr>
+					</table>
+				</div>
+				
+			</div>
+		</div>
+		
+		
+	</body>
+</html>
